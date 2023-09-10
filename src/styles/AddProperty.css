@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: 32px;
   margin: 16px;
-  width: auto;
+  width: fit-content;
   border: 1px solid rgb(234, 229, 246);
   border-radius: 32px;
 }
@@ -32,7 +32,7 @@ select {
 
 .form-button {
   padding: 8px 16px 8px 16px;
-  width: 264px;
+  width: 300px;
   max-width: 100%;
   box-sizing: border-box;
   color: white;

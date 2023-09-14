@@ -14,28 +14,35 @@ const AddProperty = () => {
     event.preventDefault();
     console.log(fields);
     const response = axios
-      .post("http://localhost:4000/api/v1/PropertyListing", fields)
+      .post("http://localhost:4000/api/v1/PropertyListin", fields)
       .then(function (res) {
         console.log(res);
         return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
       });
 
-    console.log(response);
+    // console.log(response);
   };
 
   const handleFieldChange = (event) => {
+    // ? sets the value of the field to the value of the input field
     const inputName = event.target.name;
     const { value } = event.target;
 
     setFields({ ...fields, [inputName]: value });
-    // console.log(inputName);
-    // console.log(value);
-    // console.log(fields);
   };
 
+  // ? renders the AddProperty component
   return (
     <div className="addProperty">
       <form className="form" onSubmit={handleAddProperty}>
+        <h1>Add a new property</h1>
+        <p className="form-description">
+          Create a new property on our platform by filling out the form below
+        </p>
         {/* Title */}
         <label className="form-label" htmlFor="title">
           Title <br />

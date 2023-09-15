@@ -9,7 +9,7 @@ a {
   padding: 8px;
   align-items: center;
   gap: 16px;
-  background-color: white;
+  background-color: var(--background-col);
   border: 1px solid rgb(234, 229, 246);
 }
 
@@ -31,7 +31,7 @@ a {
   margin: 0;
   padding: 8px 16px 8px 16px;
   line-height: 0.5rem;
-  font-size: 14px;
+  font-size: var(--body14px);
   cursor: pointer;
 }
 

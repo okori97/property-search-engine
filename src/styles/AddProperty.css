@@ -7,7 +7,7 @@
   width: 350px;
   border: 1px solid rgb(234, 229, 246);
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--background-col);
 }
 
 .form-description {
@@ -29,7 +29,7 @@
 .form-label > input,
 select {
   border: 1px solid rgb(193, 189, 205);
-  font-size: 14px;
+  font-size: var(--body14px);
   border-radius: 4px;
   padding: 8px 4px 8px 4px;
   width: 100%;
@@ -39,7 +39,7 @@ select {
 }
 
 .form-label {
-  font-size: 14px;
+  font-size: var(--body14px);
   font-weight: 500;
   text-transform: capitalize !important;
   display: flex;

@@ -1,3 +1,8 @@
+:root {
+  --background-col: #ffffff;
+  --body14px: 14px;
+}
+
 body {
   margin: 0;
   background-color: rgb(210, 222, 234);

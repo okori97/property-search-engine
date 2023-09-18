@@ -1,0 +1,41 @@
+:root {
+  --success-primary: #0a5d2b;
+  --success-secondary: #f1fdf6;
+  --error-primary: #7c1b26;
+  --error-secondary: #f2c6cb;
+}
+
+.Alert__success {
+  margin-bottom: 8px;
+  border: 0.5px solid var(--success-primary);
+  background-color: var(--success-secondary);
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.Alert__success-message {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: var(--body14px);
+  color: var(--success-primary);
+}
+.Alert__error {
+  margin-bottom: 8px;
+  border: 0.5px solid var(--error-primary);
+  background-color: var(--error-secondary);
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.Alert__error-message {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: var(--body14px);
+  color: var(--error-primary);
+}

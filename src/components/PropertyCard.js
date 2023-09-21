@@ -16,7 +16,7 @@ const PropertyCard = (prop) => {
       <p>`${bathrooms}`</p>
       <p>`${price}`</p>
       <button className="property-card-button" type="button">
-        <a href={email}>email</a>
+        <a href={email}></a>
       </button>
     </div>
   );

@@ -1,22 +1,43 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 import "../styles/PropertyCard.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBed,
+  faBath,
+  faEnvelope,
+  faSterlingSign,
+} from "@fortawesome/free-solid-svg-icons";
+
+const bedIcon = <FontAwesomeIcon icon={faBed} />;
+const bathIcon = <FontAwesomeIcon icon={faBath} />;
+const mailIcon = <FontAwesomeIcon icon={faEnvelope} />;
+const poundIcon = <FontAwesomeIcon icon={faSterlingSign} />;
 
 const PropertyCard = (prop) => {
   const { title, type, bathrooms, bedrooms, price, city, email } = prop;
 
   return (
     <div className="property-card">
-      <p>
-        `${bedrooms} bedroom ${type} property`
-      </p>
-      <p>
-        `${type} - ${city}`
-      </p>
-      <p>` ${bedrooms}`</p>
-      <p>`${bathrooms}`</p>
-      <p>`${price}`</p>
+      <div className="property-card-image" />
+      <div className="property-card-title">{title}</div>
+      <div className="property-card-text">
+        {type} - {city}
+      </div>
+      <div className="property-card-metadata">
+        {bedIcon}
+        {bedrooms}
+      </div>
+      <div className="property-card-metadata">
+        {bathIcon}
+        {bathrooms}
+      </div>
+      <div className="property-card-metadata">
+        {poundIcon}
+        {price}
+      </div>
       <button className="property-card-button" type="button">
-        <a href={email}></a>
+        <a href={email}>Email {mailIcon}</a>
       </button>
     </div>
   );

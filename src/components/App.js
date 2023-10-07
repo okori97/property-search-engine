@@ -14,7 +14,6 @@ const App = () => (
         <Route path="/" element={<Properties />} />
         <Route path="/add-property" element={<AddProperty />} />
       </Routes>
-      <h2>Surreal Estate</h2>
     </div>
   </BrowserRouter>
 );

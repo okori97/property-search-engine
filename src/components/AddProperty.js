@@ -18,9 +18,9 @@ const AddProperty = () => {
     event.preventDefault();
     setAlert({ message: "", isSuccess: false });
 
-    const response = axios
-      .post("http://localhost:4000/api/v1/PropertyListin", fields)
-      .then(function (res) {
+    axios
+      .post("http://localhost:4000/api/v1/PropertyListing", fields)
+      .then(function req(res) {
         setAlert({ ...alert, message: "Property added.", isSuccess: true });
         return res;
       })

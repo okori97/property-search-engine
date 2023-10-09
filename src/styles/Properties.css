@@ -1,6 +1,7 @@
 .property-grid {
   padding: 16px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }

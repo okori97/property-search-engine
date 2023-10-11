@@ -1,24 +1,33 @@
 /* eslint-disable consistent-return */
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "../styles/Properties.css";
 import getProperties from "../requests/getProperties";
 import PropertyCard from "./PropertyCard";
 import Alert from "./Alert";
+import axios from "axios";
 
 const Properties = () => {
   const initialState = { properties: [], message: "" };
   const [message, setMessage] = useState(initialState.message);
   const [properties, setProperties] = useState(initialState.properties);
+  const { search } = useLocation();
 
   console.log(properties.length);
 
+  const fetchProperties = async (query) => {
+    const result = await getProperties(setMessage, query);
+    setProperties(await result);
+  };
+
   useEffect(() => {
-    const fetchProperties = async () => {
-      const result = await getProperties(setMessage);
-      setProperties(await result);
-    };
     fetchProperties();
   }, []);
+
+  useEffect(() => {
+    console.log(search);
+    fetchProperties(search);
+  }, [search]);
 
   const renderProperties = () => {
     let result;

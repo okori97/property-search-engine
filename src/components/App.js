@@ -5,11 +5,13 @@ import React from "react";
 import Navbar from "./Navbar";
 import Properties from "./Properties";
 import AddProperty from "./AddProperty";
+import Sidebar from "./Sidebar";
 
 const App = () => (
   <BrowserRouter>
     <div className="App">
       <Navbar />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Properties />} />
         <Route path="/add-property" element={<AddProperty />} />

@@ -10,6 +10,7 @@
   border: 0.5px solid var(--success-primary);
   background-color: var(--success-secondary);
   width: 100%;
+  height: fit-content;
   max-width: 100%;
   padding: 4px;
   box-sizing: border-box;
@@ -27,6 +28,7 @@
   border: 0.5px solid var(--error-primary);
   background-color: var(--error-secondary);
   width: 100%;
+  height: fit-content;
   max-width: 100%;
   padding: 4px;
   box-sizing: border-box;

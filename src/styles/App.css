@@ -1,0 +1,6 @@
+.App {
+  position: relative;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content min-content min-content;
+}

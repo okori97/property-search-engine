@@ -5,13 +5,19 @@ import "../styles/Sidebar.css";
 import qs from "qs";
 
 const Sidebar = () => {
-  const currentQs = useLocation().search;
+  const { search } = useLocation();
 
   const buildQueryString = (operation, valueObj) => {
-    const qString = qs.parse(currentQs, { ignoreQueryPrefix: true });
-    const newQs = { ...qString, [operation]: valueObj };
-    const result = qs.stringify(newQs, { addQueryPrefix: true, encode: false });
-    return result;
+    const currentQueryParams = qs.parse(search, { ignoreQueryPrefix: true });
+    const newQueryParams = {
+      ...currentQueryParams,
+      [operation]: JSON.stringify(valueObj),
+    };
+    const stringifedParams = qs.stringify(newQueryParams, {
+      addQueryPrefix: true,
+      encode: false,
+    });
+    return stringifedParams;
   };
 
   buildQueryString("sort", { price: 1 });

@@ -1,10 +1,46 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   height: 100vh;
-  width: 150px;
+  width: 300px;
   max-width: 100%;
   background-color: white;
-  padding: 16px 24px;
+  padding: 12px 12px;
+}
+
+.sidebar-link {
+  margin-bottom: 16px;
+}
+.sidebar-link:hover {
+  color: #704b70;
+}
+
+span {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.sidebar-search-form {
+  display: flex;
+  max-width: 100%;
+  border: 1px solid rgb(211, 198, 241);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+input[type="search"] {
+  width: 100%;
+  border-radius: 0px;
+  border: none;
+}
+
+.sidebar-search-form > button {
+  background-color: #704b70;
+  border: none;
+  color: white;
+  box-shadow: none;
+  padding: 10px;
+  width: fit-content;
+}
+.fa-magnifying-glass {
+  font-size: 14px;
 }

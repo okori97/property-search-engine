@@ -2,19 +2,30 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.header {
+  display: flex;
+  width: 100%;
+  border: none;
+}
 .navbar {
   margin: 0;
   display: flex;
-  width: auto;
+  width: 100%;
+  max-height: fit-content;
   padding: 8px;
   align-items: center;
   gap: 16px;
   background-color: var(--background-col);
   border: 1px solid rgb(234, 229, 246);
 
-  grid-row-start: 1;
+  /* grid-row-start: 1;
   grid-column: 1;
-  grid-column-end: 3;
+  grid-column-end: 3; */
+}
+
+.sso-wrapper {
+  width: 310px;
 }
 
 .navbar-logo {
@@ -41,6 +52,26 @@ a {
 
 .navbar-links-item:hover {
   color: #774872;
+}
+
+.facebook-button {
+  ont-family: Helvetica, sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: calc(0.27548vw + 12.71074px);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+  background-color: #4c69ba;
+  border: calc(0.06887vw + 0.67769px) solid #4c69ba;
+  padding: calc(0.34435vw + 13.38843px) calc(0.34435vw + 18.38843px);
 }
 
 root {

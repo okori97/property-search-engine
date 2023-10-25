@@ -1,4 +1,7 @@
 .App {
+}
+
+.page-content {
   position: relative;
   display: grid;
   grid-template-columns: min-content 1fr;
